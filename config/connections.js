@@ -42,7 +42,7 @@ module.exports.connections = {
   ***************************************************************************/
   golf_tracker_mysql: {
      adapter: 'sails-mysql',
-     host: 'local_host',
+     host: 'localhost',
      user: 'golf_tracker', //optional
      password: 'Teamusa12!', //optional
      database: 'golf_tracker' //optional
