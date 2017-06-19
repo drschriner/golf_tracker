@@ -1,0 +1,13 @@
+
+  <h2>Edit: <%= golfer.first_name + " " + golfer.last_name %></h2>
+
+    <div id="content2">
+
+      <form action="/golfer/update/<%= golfer.id %>" method="POST">
+
+        <h4>Full Name:</h4><input value="<%= golfer.first_name + " " + golfer.last_name %>" type="text" name="name"> <br/>
+        <input type="submit" value="Edit Customer"/>
+
+      </form>
+
+    </div>

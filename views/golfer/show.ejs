@@ -1,0 +1,20 @@
+
+  <br>
+
+  <h1>Golfer Information:</h1>
+
+    <div id="content3">
+
+      <h1>Name:  <%= golfer.first_name + " " + golfer.last_name %></h1>
+      <h1>Nickname: <%= golfer.nickname %></h1>
+      <h1>Handicap:  <%= golfer.handicap %></h1>
+
+      <form action="/golfer/destroy/<%=golfer.id%>" method="POST">
+        <input style="margin-left: 10%; margin-top: 10px; padding: 5px;" type="submit" value="Delete User" />
+      </form>
+
+      <form action="/golfer/edit/<%=golfer.id%>" method="POST">
+        <input style="margin-left: 10%; margin-top: 10px; padding: 5px;" type="submit" value="Edit User" />
+      </form>
+
+    </div>

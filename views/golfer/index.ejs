@@ -1,0 +1,30 @@
+
+  <br>
+
+  <h1>Comprehensive Profile Listing:</h1>
+
+    <div id="tables">
+
+      <table>
+
+        <tr>
+          <th>ID</th>
+          <th>Golfer Name</th>
+          <th>Nickname</th>
+          <th>Handicap</th>
+        </tr>
+
+        <% _.each(golfers, function(golfer) { %>
+        <tr data-id="<%= golfer.id %>" data-model="golfer">
+          <td><%= golfer.id %></td>
+          <td><%= golfer.first_name + " " + golfer.last_name%></td>
+          <td><%= golfer.nickname %></td>
+          <td><%= golfer.handicap %></td>
+
+          <td id="special"><a href="/golfer/show/<%= golfer.id %>">Profile</a></td>
+          <td id="special"><a href="/golfer/new?contID=<%=golfer.id%>">Enter Round</a></td>
+        </tr>
+        <% })%>
+      </table>
+
+    </div>
