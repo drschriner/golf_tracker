@@ -24,6 +24,10 @@ module.exports = {
       required: true
     },
 
+    score_average: {
+      type: 'string'
+    },
+
     handicap: {
       type: 'string'
     }

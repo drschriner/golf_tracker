@@ -76,6 +76,13 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  color: #2F4F4f;
+  text-align: left;
+  margin-left: 10%;
+  font-weight: bold;
+}
+
 #overview {
 border-style: solid;
 border-width: medium;

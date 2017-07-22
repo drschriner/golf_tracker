@@ -5,16 +5,18 @@
 
     <div id="content3">
 
-      <h1>Name:  <%= golfer.first_name + " " + golfer.last_name %></h1>
-      <h1>Nickname: <%= golfer.nickname %></h1>
+      <h1> <%= golfer.first_name + " " + golfer.last_name %> | <%= golfer.nickname %></h1>
+      <h1>Score Average: <%= golfer.score_average %></h1>
       <h1>Handicap:  <%= golfer.handicap %></h1>
 
-      <form action="/golfer/destroy/<%=golfer.id%>" method="POST">
-        <input style="margin-left: 10%; margin-top: 10px; padding: 5px;" type="submit" value="Delete User" />
-      </form>
+      <br>
 
-      <form action="/golfer/edit/<%=golfer.id%>" method="POST">
-        <input style="margin-left: 10%; margin-top: 10px; padding: 5px;" type="submit" value="Edit User" />
-      </form>
+      <td id="special"><a style="margin-left: 5%" href="/golfer/edit/<%= golfer.id %>">Edit Golfer</a></td> |
+
+      <td id="special"><a href="/golfer/destroy/<%= golfer.id %>">Delete Golfer</a></td> |
+
+      <td>
+        <a class="btn btn-success" style="margin-left: 100px; padding: 10px;" href="/course/new?contID=<%=golfer.id%>">Enter New Round!</a>
+      </td>
 
     </div>

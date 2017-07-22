@@ -1,13 +1,17 @@
 
-  <h2>Edit: <%= golfer.first_name + " " + golfer.last_name %></h2>
+  <h2><%= golfer.first_name + " " + golfer.last_name %>'s Information</h2>
 
     <div id="content2">
 
       <form action="/golfer/update/<%= golfer.id %>" method="POST">
 
-        <h4>Full Name:</h4><input value="<%= golfer.first_name + " " + golfer.last_name %>" type="text" name="name"> <br/>
-        <input type="submit" value="Edit Customer"/>
+        <h3>Full Name:</h3><input style="margin-left: 10%" value="<%= golfer.first_name + " " + golfer.last_name %>" type="text" name="name"> <br/>
+        <h3>Nickname:</h3><input style="margin-left: 10%" value="<%= golfer.nickname%>" type="text" name="nickname"> <br/>
+        <br>
+        <input style="margin-left: 10%" type="submit" value="Edit Customer"/>
 
       </form>
+
+
 
     </div>

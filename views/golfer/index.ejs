@@ -11,6 +11,7 @@
           <th>ID</th>
           <th>Golfer Name</th>
           <th>Nickname</th>
+          <th>Score Average</th>
           <th>Handicap</th>
         </tr>
 
@@ -19,9 +20,10 @@
           <td><%= golfer.id %></td>
           <td><%= golfer.first_name + " " + golfer.last_name%></td>
           <td><%= golfer.nickname %></td>
+          <td><%= golfer.score_average%></td>
           <td><%= golfer.handicap %></td>
 
-          <td id="special"><a href="/golfer/show/<%= golfer.id %>">Profile</a></td>
+          <td id="special"><a href="/golfer/show/<%= golfer.id %>">Player Profile</a></td>
           <td id="special"><a href="/golfer/new?contID=<%=golfer.id%>">Enter Round</a></td>
         </tr>
         <% })%>
