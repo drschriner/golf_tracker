@@ -1,0 +1,24 @@
+
+
+  <br>
+
+  <h1>Course Information:</h1>
+
+    <div id="content3">
+
+      <h1> <%= course.name %> </h1>
+      <h1> <%= course.city %>, <%= course.state %> <%= course.zip %> </h1>
+      <h1> Par ~ <%= course.par %></h1>
+      <h1> <%= course.description %></h1>
+
+      <br>
+
+      <td id="special"><a style="margin-left: 5%" href="/course/edit/<%= course.id %>">Edit Course</a></td> |
+
+      <td id="special"><a href="/course/destroy/<%= course.id %>">Delete Course</a></td> |
+
+      <td>
+        <a class="btn btn-success" style="margin-left: 100px; padding: 10px;" href="/course/new?contID=<%=course.id%>">Enter New Round!</a>
+      </td>
+
+    </div>
