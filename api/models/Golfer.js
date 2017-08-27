@@ -30,7 +30,8 @@ module.exports = {
 
     handicap: {
       type: 'string'
-    }
+    },
+
   }
 };
 
