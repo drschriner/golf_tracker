@@ -9,27 +9,25 @@
       <table>
 
         <tr>
-          <th>ID</th>
           <th>Course Name</th>
           <th>City</th>
           <th>State</th>
-          <th>Zip Code</th>
           <th>Par</th>
+          <th>Yardage</th>
           <th>Description</th>
         </tr>
 
         <% _.each(courses, function(course) { %>
         <tr data-id="<%= course.id %>" data-model="course">
-          <td><%= course.id %></td>
           <td><%= course.name%></td>
           <td><%= course.city %></td>
           <td><%= course.state%></td>
-          <td><%= course.zip %></td>
-          <td><%= course.par%></td>
+          <td><%= course.par %></td>
+          <td><%= course.yardage%></td>
           <td><%= course.description %></td>
 
           <td id="special"><a href="/course/show/<%= course.id %>">Course Info</a></td>
-          <td id="special"><a href="/course/new?contID=<%=course.id%>">Enter Round</a></td>
+
         </tr>
         <% })%>
       </table>

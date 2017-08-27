@@ -19,6 +19,20 @@ module.exports = {
     });
   },
 
+  //for rounds
+  'round': function (req, res) {
+    res.view();
+  },
+
+  //for rounds
+  make: function (req, res, next) {
+    Round.make(req.params.all(), function roundCreated(err, round) {
+      if (err) return next(err);
+
+      res.redirect('/round/show/' + round.id);
+    });
+  },
+
   show: function (req, res, next) {
     Course.findOne(req.param('id')).populateAll().exec(function foundCourse(err, course) {
       if (err) return next(err);

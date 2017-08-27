@@ -34,9 +34,15 @@ module.exports = {
       required: true
     },
 
+    yardage: {
+      type: 'string',
+      required: true
+    },
+
     description: {
       type: 'string'
-    }
+    },
+
 
   }
 };
