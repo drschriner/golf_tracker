@@ -1,0 +1,30 @@
+
+  <br>
+
+   <h2>Edit Round Information</h2>
+
+        <div id="content2">
+
+          <form action="/round/update/<%= round.id %>" method="POST">
+
+            <input type="hidden" name="owner" value="<%- round.owner %>" />
+
+            <h3>Course:</h3><input style="margin-left: 10%" value="<%= round.location %>" type="text" name="location"> <br/>
+            <h3>Date:</h3><input style="margin-left: 10%" value="<%= round.date %>"type="text" name="date" > <br/>
+            <h3>Holes Played:</h3><input style="margin-left: 10%" value="<%= round.holes_played %>"type="text" name="holes_played" > <br/>
+            <h3>Total Score:</h3><input style="margin-left: 10%" value="<%= round.total_score %>"type="text" name="total_score" > <br/>
+            <h3>Relation to Par:</h3><input style="margin-left: 10%" value="<%= round.relation_to_par %>"type="text" name="relation_to_par" > <br/>
+            <h3>Front Nine:</h3><input style="margin-left: 10%" value="<%= round.front_score %>" type="text" name="front_score" > <br/>
+            <h3>Back Nine:</h3><input style="margin-left: 10%" value="<%= round.back_score %>" type="text" name="back_score" > <br/>
+            <h3>Putts:</h3><input style="margin-left: 10%" value="<%= round.putts %>"type="text" name="putts" > <br/>
+            <h3>Greens:</h3><input style="margin-left: 10%" value="<%= round.greens %>"type="text" name="greens" > <br/>
+            <h3>Fairways:</h3><input style="margin-left: 10%" value="<%= round.fairways %>"type="text" name="fairways" > <br/>
+            <h3>Birdies:</h3><input style="margin-left: 10%" value="<%= round.putts %>"type="text" name="birdies" > <br/>
+            <h3>Birdies:</h3><input style="margin-left: 10%" value="<%= round.par_saves %>"type="text" name="par_saves" > <br/>
+            <h3>Doubles:</h3><input style="margin-left: 10%" value="<%= round.doubles %>"type="text" name="doubles" > <br/>
+            <br>
+            <input style="margin-left: 10%" type="submit" value="Edit Round"/>
+
+          </form>
+
+        </div>

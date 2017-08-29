@@ -1,0 +1,35 @@
+
+    <br>
+
+    <h1>Round Breakdown:</h1>
+
+      <div id="content4">
+
+        <h2>Course:</h2><p id="roundShow"><%= round.location %> </p>
+        <h2>Date:</h2><p id="roundShow"><%= round.date %> </p>
+        <h2>Holes Played:</h2><p id="roundShow"><%= round.holes_played%> </p>
+        <h2>Total Score:</h2><p id="roundShow"><%= round.total_score %> </p>
+        <h2>Score to Par:</h2><p id="roundShow"><%= round.relation_to_par %> </p>
+        <h2>Front Score:</h2><p id="roundShow"><%= round.front_score %> </p>
+        <h2>Back Score:</h2><p id="roundShow"><%= round.back_score %> </p>
+
+      </div>
+
+    <div id="content5">
+
+
+      <h2>Number of Putts:</h2><p id="roundShow"><%= round.putts %> </p>
+      <h2>Greens in Regulation:</h2><p id="roundShow"><%= round.greens %> </p>
+      <h2>Fairways Hit:</h2><p id="roundShow"><%= round.fairways %> </p>
+      <h2>Birdies Made:</h2><p id="roundShow"><%= round.birdies %> </p>
+      <h2>Par Saves:</h2><p id="roundShow"><%= round.par_saves %> </p>
+      <h2>Doubles or Worse:</h2><p id="roundShow"><%= round.doubles %> </p>
+
+      <br>
+
+      <td id="special"><a style="margin-left: 10%" href="/round/edit/<%= round.id %>">Edit Round</a></td> |
+
+      <td id="special"><a href="/round/destroy/<%= round.id %>">Delete Round</a></td> |
+
+    </div>
+
