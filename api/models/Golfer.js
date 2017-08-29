@@ -32,6 +32,11 @@ module.exports = {
       type: 'string'
     },
 
+    rounds: {
+      collection: 'round',
+      via: 'owner'
+    },
+
   }
 };
 

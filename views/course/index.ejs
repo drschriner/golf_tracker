@@ -4,7 +4,7 @@
 
   <h1>Comprehensive Course Listing:</h1>
 
-    <div id="tables">
+    <div id="tables3">
 
       <table>
 
@@ -12,9 +12,10 @@
           <th>Course Name</th>
           <th>City</th>
           <th>State</th>
-          <th>Par</th>
+          <th>Course Par</th>
+          <th>Front Nine Par</th>
+          <th>Back Nine Par</th>
           <th>Yardage</th>
-          <th>Description</th>
         </tr>
 
         <% _.each(courses, function(course) { %>
@@ -22,9 +23,10 @@
           <td><%= course.name%></td>
           <td><%= course.city %></td>
           <td><%= course.state%></td>
-          <td><%= course.par %></td>
+          <td><%= course.total_par %></td>
+          <td><%= course.front_par %></td>
+          <td><%= course.back_par %></td>
           <td><%= course.yardage%></td>
-          <td><%= course.description %></td>
 
           <td id="special"><a href="/course/show/<%= course.id %>">Course Info</a></td>
 

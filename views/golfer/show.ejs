@@ -5,21 +5,56 @@
 
     <div id="content3">
 
-      <h1> <%= golfer.first_name + " " + golfer.last_name %> | <%= golfer.nickname %></h1>
-      <h1>Score Average: <%= golfer.score_average %></h1>
-      <h1>Handicap:  <%= golfer.handicap %></h1>
+      <h2>Name:</h2><p id="roundShow"><%= golfer.first_name + " " + golfer.last_name %> | <%= golfer.nickname %> </p>
+      <h2>Scoring Average:</h2><p id="roundShow"><%= golfer.score_average %> </p>
+      <h2>Handicap:</h2><p id="roundShow"><%= golfer.handicap %> </p>
+
 
       <br>
 
-      <td id="special"><a style="margin-left: 10%" href="/golfer/edit/<%= golfer.id %>">Edit Golfer</a></td> |
+      <td id="special"><a style="margin-left: 10%" href="/golfer/stats/<%= golfer.id %>">Statistics</a></td> |
+
+      <td id="special"><a href="/golfer/edit/<%= golfer.id %>">Edit Golfer</a></td> |
 
       <td id="special"><a href="/golfer/destroy/<%= golfer.id %>">Delete Golfer</a></td> |
 
-      <td>
-        <a class="btn btn-success" style="margin-left: 100px; margin-botton: 70px; padding: 7px;" href="/round/new/>">Enter New Round!</a>
-      </td>
+      <form style="margin-left: 350px;" action="/round/new" method="POST" >
+        <input type="hidden" value="<%= golfer.id %>" name="owner">
+        <input type="submit" value="Add Round" />
+      </form>
 
-      <br>
-      <br>
+    </div>
+
+  <h2>Player Rounds <i>  ~ Last 20</i></h2>
+
+  <div id="tables2">
+
+    <table>
+      <tr>
+        <th>Course</th>
+        <th>Dates</th>
+        <th>Holes Played</th>
+        <th>Total Score</th>
+        <th>Relation to Par</th>
+        <th>Putts</th>
+        <th>Greens in Regulation</th>
+      </tr>
+
+      <% _.each(golfer.rounds, function(round) { %>
+      <tr data-id="<%= round.id %>" data-model="round" >
+        <td><%= round.location %></td>
+        <td><%= round.date %></td>
+        <td><%= round.holes_played %></td>
+        <td><%= round.total_score %></td>
+        <td><%= round.relation_to_par %></td>
+        <td><%= round.putts %></td>
+        <td><%= round.greens %></td>
+
+        <td id="special2"><a href="/round/show/<%= round.id %>">Details</a></td>
+        <td id="special2"><a href="/round/edit/<%= round.id %>">Edit</a></td>
+        <td id="special2"><a href="/round/destroy/<%= round.id %>">Delete</a></td>
+      </tr>
+      <% }); %>
+    </table>
 
     </div>

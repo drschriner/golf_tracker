@@ -29,7 +29,17 @@ module.exports = {
       required: true
     },
 
-    par: {
+    total_par: {
+      type: 'string',
+      required: true
+    },
+
+    front_par: {
+      type: 'string',
+      required: true
+    },
+
+    back_par: {
       type: 'string',
       required: true
     },

@@ -8,6 +8,7 @@
       <table>
 
         <tr>
+          <th>Golfer ID</th>
           <th>Golfer Name</th>
           <th>Nickname</th>
           <th>Score Average</th>
@@ -16,15 +17,18 @@
 
         <% _.each(golfers, function(golfer) { %>
         <tr data-id="<%= golfer.id %>" data-model="golfer">
+          <td><%= golfer.id %></td>
           <td><%= golfer.first_name + " " + golfer.last_name%></td>
           <td><%= golfer.nickname %></td>
           <td><%= golfer.score_average%></td>
           <td><%= golfer.handicap %></td>
 
           <td id="special"><a href="/golfer/show/<%= golfer.id %>">Player Profile</a></td>
-          <td id="special"><a href="/round/new/">Enter Round</a></td>
         </tr>
         <% })%>
       </table>
 
+
     </div>
+
+

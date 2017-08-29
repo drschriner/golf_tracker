@@ -6,11 +6,13 @@
 
     <div id="content3">
 
-      <h1> <%= course.name %> </h1>
-      <h1> <%= course.city %>, <%= course.state %> <%= course.zip %> </h1>
-      <h1> Par ~ <%= course.par %></h1>
-      <h1> Yardage ~ <%= course.yardage %></h1>
-      <h1> <%= course.description %></h1>
+      <h2>Name of Course:</h2><p id="roundShow"><%= course.name %> </p>
+      <h2>Address:</h2><p id="roundShow"><%= course.city %>, <%= course.state %> <%= course.zip %> </p>
+      <h2>Course Par:</h2><p id="roundShow"><%= course.total_par %> </p>
+      <h2>Front Nine Par:</h2><p id="roundShow"><%= course.front_par %> </p>
+      <h2>Back Nine Par:</h2><p id="roundShow"><%= course.back_par %> </p>
+      <h2>Course Yardage:</h2><p id="roundShow"><%= course.yardage %> </p>
+      <h2>Course Description:</h2><p id="roundShow"><%= course.description %> </p>
 
       <br>
 
