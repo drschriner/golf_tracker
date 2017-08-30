@@ -28,7 +28,36 @@ module.exports = {
       res.view({
         golfer: golfer
       });
-    });
+
+
+//      function sum() {
+//        var total = [0, 1, 2, 3].reduce(function (a, b) {
+//          return a + b;
+//        }, 0);
+//      }
+//      golfer.total_score = sum();
+
+
+
+   // function to add up all the player's score
+      golfer.rounds.forEach(function(rounds) {
+
+        golfer.total_strokes = 0;
+
+        rounds.one_score = rounds.total_score;
+
+        golfer.total_strokes += (rounds.one_score);
+
+        var i = rounds.one_score;
+
+        console.log(golfer.total_strokes);
+
+
+
+      })
+
+  });
+
   },
 
 

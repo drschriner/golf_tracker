@@ -1,31 +1,32 @@
 
   <br>
 
-  <h1>Golfer Information:</h1>
+  <a class="btn btn-success" style="margin-right: 35%; margin-top: 1%; float: right; padding: 8px;" href="/golfer/stats/<%= golfer.id %>">Player Statistics</a>
+
+  <h1><%=golfer.first_name + " " +  golfer.last_name%>'s Player Profile:</h1>
 
     <div id="content3">
 
       <h2>Name:</h2><p id="roundShow"><%= golfer.first_name + " " + golfer.last_name %> | <%= golfer.nickname %> </p>
-      <h2>Scoring Average:</h2><p id="roundShow"><%= golfer.score_average %> </p>
+      <h2>Scoring Average:</h2><p id="roundShow"><%= golfer.total_score %> </p>
       <h2>Handicap:</h2><p id="roundShow"><%= golfer.handicap %> </p>
-
 
       <br>
 
-      <td id="special"><a style="margin-left: 10%" href="/golfer/stats/<%= golfer.id %>">Statistics</a></td> |
-
-      <td id="special"><a href="/golfer/edit/<%= golfer.id %>">Edit Golfer</a></td> |
+      <td id="special"><a style="margin-left: 10%;" href="/golfer/edit/<%= golfer.id %>">Edit Golfer</a></td> |
 
       <td id="special"><a href="/golfer/destroy/<%= golfer.id %>">Delete Golfer</a></td> |
 
-      <form style="margin-left: 350px;" action="/round/new" method="POST" >
-        <input type="hidden" value="<%= golfer.id %>" name="owner">
-        <input type="submit" value="Add Round" />
+      <form style="margin-left: 250px;" action="/round/new" method="POST" >
+        <input type="hidden" name="owner" value="<%= golfer.id %>">
+        <input type="submit" value="Add New Round" />
       </form>
 
     </div>
 
-  <h2>Player Rounds <i>  ~ Last 20</i></h2>
+  <br>
+
+  <i><h2><%=golfer.first_name %>'s Played Rounds: </h2></i>
 
   <div id="tables2">
 

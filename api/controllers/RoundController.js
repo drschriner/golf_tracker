@@ -9,7 +9,9 @@ module.exports = {
 
   'new': function(req, res, err) {
     Golfer.findOne(req.param('owner'), function foundGolfer (err, golfer) {;
-      res.view({
+    if (err) return next(err);
+    if (!golfer) return next()
+    res.view({
         golfer: golfer
       });
     });
@@ -31,6 +33,16 @@ module.exports = {
 
       res.view({
         round: round
+      });
+    });
+  },
+
+  index: function (req, res, next) {
+    Round.find(function foundRounds(err, rounds) {
+      if (err) return next(err);
+
+      res.view({
+        rounds: rounds
       });
     });
   },

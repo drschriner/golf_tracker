@@ -20,57 +20,57 @@ module.exports = {
     },
 
     holes_played: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     total_score: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     relation_to_par: {
-      type: 'string',
+      type: 'text',
       required: true
     },
 
     front_score: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     back_score: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     greens: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     putts: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     fairways: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     birdies: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     par_saves: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 
     doubles: {
-      type: 'string',
+      type: 'float',
       required: true
     },
 

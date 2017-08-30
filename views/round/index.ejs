@@ -1,0 +1,36 @@
+
+Delete this page - if do not need index
+
+    <h2>Player Rounds <i>  ~ Last 20</i></h2>
+
+      <div id="tables2">
+
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>Dates</th>
+            <th>Holes Played</th>
+            <th>Total Score</th>
+            <th>Relation to Par</th>
+            <th>Putts</th>
+            <th>Greens in Regulation</th>
+          </tr>
+
+          <% _.each(rounds, function(round) { %>
+          <tr data-id="<%= round.id %>" data-model="round" >
+            <td><%= round.location %></td>
+            <td><%= round.date %></td>
+            <td><%= round.holes_played %></td>
+            <td><%= round.total_score %></td>
+            <td><%= round.relation_to_par %></td>
+            <td><%= round.putts %></td>
+            <td><%= round.greens %></td>
+
+            <td id="special2"><a href="/round/show/<%= round.id %>">Details</a></td>
+            <td id="special2"><a href="/round/edit/<%= round.id %>">Edit</a></td>
+            <td id="special2"><a href="/round/destroy/<%= round.id %>">Delete</a></td>
+          </tr>
+          <% }); %>
+        </table>
+
+      </div>
