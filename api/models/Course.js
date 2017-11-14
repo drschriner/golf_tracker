@@ -53,6 +53,11 @@ module.exports = {
       type: 'string'
     },
 
+    owner: {
+      model: 'round',
+      required: true
+    },
+
 
   }
 };

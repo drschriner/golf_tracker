@@ -1,0 +1,38 @@
+
+  <br>
+
+  <a class="btn btn-success" style="margin-right: 20%; margin-top: 1%; float: right; padding: 8px;" href="/golfer/show/<%= golfer.id %>">Return to Player Profile</a>
+
+  <h1><%=golfer.first_name + " " +  golfer.last_name%>'s Player Statistics:</h1>
+
+
+  <div id="content4">
+
+    <h2>Total Strokes:</h2> <p id="roundShow"><%= (golfer.total_strokes)%>  </p>
+    <h2>Total Rounds Played:</h2> <p id="roundShow"><%= (golfer.total_rounds)%> </p>
+    <h2>Scoring Average:</h2> <p id="roundShow"><%= (golfer.average_strokes).toFixed(2)%> </p>
+    <h2>Front Strokes:</h2> <p id="roundShow"><%= (golfer.front_strokes)%></p>
+    <h2>Front Rounds Played:</h2> <p id="roundShow"><%= (golfer.front_rounds)%>  </p>
+    <h2>Front Scoring Average:</h2> <p id="roundShow"><%= (golfer.average_frontStrokes).toFixed(2)%> </p>
+    <h2>Back Strokes:</h2> <p id="roundShow"><%= (golfer.back_strokes)%> </p>
+    <h2>Back Rounds Played:</h2> <p id="roundShow"><%= (golfer.back_rounds)%> </p>
+    <h2>Back Scoring Average:</h2> <p id="roundShow"><%= (golfer.average_backStrokes).toFixed(2)%> </p>
+
+  </div>
+
+  <div id="content5">
+
+    <h2>Total Greens:</h2> <p id="roundShow"><%= (golfer.total_greens)%> </p>
+    <h2>Average Greens:</h2> <p id="roundShow"><%= (golfer.average_greens).toFixed(2)%> </p>
+    <h2>Total Putts:</h2> <p id="roundShow"><%= (golfer.total_putts)%> </p>
+    <h2>Average Putts:</h2> <p id="roundShow"><%= (golfer.average_putts).toFixed(2)%></p>
+    <h2>Total Fairways:</h2> <p id="roundShow"><%= (golfer.total_fairways)%>  </p>
+    <h2>Average Fairways:</h2> <p id="roundShow"><%= (golfer.average_fairways).toFixed(2)%> </p>
+    <h2>Total Birdies:</h2> <p id="roundShow"><%= (golfer.total_birdies)%> </p>
+    <h2>Average Birdies:</h2> <p id="roundShow"><%= (golfer.average_birdies).toFixed(2)%> </p>
+    <h2>Total Pars:</h2> <p id="roundShow"><%= (golfer.total_pars)%> </p>
+    <h2>Average Pars:</h2> <p id="roundShow"><%= (golfer.average_pars).toFixed(2)%> </p>
+    <h2>Total Doubles:</h2> <p id="roundShow"><%= (golfer.total_doubles)%>  </p>
+    <h2>Average Doubles:</h2> <p id="roundShow"><%= (golfer.average_doubles).toFixed(2)%>  </p>
+
+  </div>

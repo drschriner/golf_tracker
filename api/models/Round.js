@@ -36,12 +36,10 @@ module.exports = {
 
     front_score: {
       type: 'float',
-      required: true
-    },
+  },
 
     back_score: {
       type: 'float',
-      required: true
     },
 
     greens: {
@@ -77,6 +75,11 @@ module.exports = {
     owner: {
       model: 'golfer',
       required: true
+    },
+
+    courses: {
+      collection: 'course',
+      via: 'owner'
     },
 
 

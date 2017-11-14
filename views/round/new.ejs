@@ -1,8 +1,200 @@
 
   <br>
 
-  <h1>Enter New Round!</h1>
+  <h1>Enter New Round!
 
+    <div id="content2">
+
+      <form id="tableForm" action="/round/create" method="POST">
+
+        <input style="margin-left: 10%;" id="owner" name ="owner" type="hidden" value="<%= golfer.id %>"></input>
+
+        <br>
+
+        <select style="margin-left: 10%;" id="course" name ="location">
+          <option>Course Played</option>
+        </select>
+
+        <br>
+
+        <input style="margin-left: 10%;"  type="date" name="date">
+
+        <br>
+
+        <select style="margin-left: 10%;"  id="selectHoles" name ="holes_played">
+          <option>Holes Played</option>
+        </select>
+
+        <br>
+
+        <input style="margin-left: 10%;" type="text" placeholder="Total Score" name="total_score" >
+
+        <input style="margin-left: 10%;" type="text" placeholder="Relative to Par" name="relation_to_par" >
+
+        <input style="margin-left: 10%;" type="text" placeholder="Front Score" name="front_score" >
+
+        <input style="margin-left: 10%;" type="text" placeholder="Back Score" name="back_score" >
+
+        <input style="margin-left: 10%;" type="text" placeholder="Greens in Regulation" name="greens" ><br />
+
+        <input style="margin-left: 10%;" type="text" placeholder="Putts" name="putts" ><br />
+
+        <input style="margin-left: 10%;" type="text" placeholder="Fairways Hit" name="fairways" ><br />
+
+        <input style="margin-left: 10%;" type="text" placeholder="Birdies Made" name="birdies" ><br />
+
+        <input style="margin-left: 10%;" type="text" placeholder="Par Saves" name="par_saves" ><br />
+
+        <input style="margin-left: 10%;" type="text" placeholder="Doubles Made Score" name="doubles" ><br />
+
+        <input style="margin-left: 75%; margin-top: 10px;" type="submit"/>
+
+      </form>
+
+    </div>
+
+
+
+    <script>
+      var myArray = new Array("Meadowlark");
+
+      var dropdown = document.getElementById("course");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <p id="demo"></p>
+
+    <script>
+      var cars = [courses];
+      var text = "";
+      var i;
+      for (i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+
+      <script>
+        var myArray = new Array("9", "18");
+
+        var dropdown = document.getElementById("selectHoles");
+
+        for (var i = 0; i < myArray.length; ++i) {
+          dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+        }
+      </script>
+
+      <script>
+        var myArray = new Array("75", "80");
+
+        var dropdown = document.getElementById("totalScore");
+
+        for (var i = 0; i < myArray.length; ++i) {
+          dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+        }
+      </script>
+
+    <script>
+      var myArray = new Array("+5", "-5");
+
+      var dropdown = document.getElementById("relationToPar");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("35", "40");
+
+      var dropdown = document.getElementById("frontScore");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("35", "40");
+
+      var dropdown = document.getElementById("backScore");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18");
+
+      var dropdown = document.getElementById("greens");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26");
+
+      var dropdown = document.getElementById("putts");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("4", "8");
+
+      var dropdown = document.getElementById("fairways");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("5", "0");
+
+      var dropdown = document.getElementById("birdies");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("10", "5");
+
+      var dropdown = document.getElementById("parSaves");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+    <script>
+      var myArray = new Array("0", "1");
+
+      var dropdown = document.getElementById("doubles");
+
+      for (var i = 0; i < myArray.length; ++i) {
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[1]);
+      }
+    </script>
+
+
+
+
+
+
+
+
+<!--
     <div id="content2">
 
       <form action="/round/create" method="POST" >
@@ -13,7 +205,7 @@
         <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Holes Played" name="holes_played" ><br />
         <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Total Score" name="total_score" ><br />
         <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Relation to Par" name="relation_to_par" ><br />
-        <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Front Nine Score" name="front_score" ><br />
+        <input style="  margin-left: 10%; margin-top: 5%" type="text" placeholder="Front Nine Score" name="front_score" ><br />
         <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Back Nine Score" name="back_score" ><br />
         <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Greens in Regulations" name="greens" ><br />
         <input style="margin-left: 10%; margin-top: 5%" type="text" placeholder="Total Putts" name="putts" ><br />
@@ -25,6 +217,10 @@
       </form>
 
     </div>
+-->
+
+
+
 
 
 
