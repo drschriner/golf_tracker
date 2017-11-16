@@ -11,6 +11,7 @@ module.exports = {
     Golfer.findOne(req.param('owner'), function foundGolfer (err, golfer) {;
     if (err) return next(err);
     if (!golfer) return next()
+
     res.view({
         golfer: golfer
       });

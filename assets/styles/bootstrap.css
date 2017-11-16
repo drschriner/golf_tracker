@@ -14,7 +14,7 @@
 #nav ul
 {
   padding: 5px;
-  margin: 0px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
   list-style-type: none;
   background-color: #001a00;
   width: 100%;
@@ -32,12 +32,6 @@
 {
   background-color: #B8860B;
 
-}
-
-/* This modifies the link once it has been clicked in the navigation list */
-#nav a:active
-{
-  background-color: #ff0000;
 }
 
 /* This modifies how links are displayed in the navigation list */
@@ -256,6 +250,48 @@ th:hover
   font-size: 18px;
   margin-left: 15%;
 }
+
+/* ############################################################ */
+/* The following code styles the drop down menu on the home page */
+.dropbtn {
+  background-color: #2F4F4f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #B8860B;
+}
+
+.dropdown {
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: rgba(47, 79, 79, 0.52);
+  color: #fff;}
+
+.show {display:block;}
+/* ############################################################ */
 
 
 /*Above CSS added by Dakota Schriner, Below CSS imported from bootstrap. */
@@ -2459,7 +2495,6 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }

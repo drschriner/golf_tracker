@@ -37,7 +37,16 @@
 
   <body id="background">
 
-  <br>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Menu Navigation</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="/">Home Page</a>
+      <a href="/golfer/new">New Golfer</a>
+      <a href="/golfer">Returning Golfer</a>
+      <a href="/course/new">New Course</a>
+      <a href="/course">Course Listing</a>
+    </div>
+  </div>
 
   <div id="nav">
 
@@ -54,6 +63,31 @@
     </ul>
 
   </div>
+
+  <script>
+    /* When the user clicks on the button,
+     toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+
 
     <%- body %>
 
@@ -81,7 +115,7 @@
     -->
 
     <!--TEMPLATES-->
-
+    
     <!--TEMPLATES END-->
 
 
@@ -113,4 +147,13 @@
     <script src="/js/bootstrap.js"></script>
     <!--SCRIPTS END-->
   </body>
+
 </html>
+
+<br>
+<br>
+<br>
+
+
+
+

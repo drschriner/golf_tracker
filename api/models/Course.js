@@ -55,7 +55,7 @@ module.exports = {
 
     owner: {
       model: 'round',
-      required: true
+      required: false
     },
 
 
